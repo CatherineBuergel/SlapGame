@@ -12,10 +12,10 @@
 
 <body>
 
-	<img class="jerry" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRds4Lh9NlPKKVzdWp7cWbFKV78hqNko3LswZnHIJ4PtawpY4Vq"
-	 alt="">
+	<!--<img class="img" src="/assets/morty.png" alt="">
+	
 	<span>Health:<span id="health">--</span></span>
-	<span>Name:<span id="name">name</span></span>
+	
 	<span>Hits:<span id="hits">0</span></span>
 
 	<footer>
@@ -25,7 +25,72 @@
 		<button onclick="giveItem('shame')">Shame</button>
 		<button onclick="giveItem('mock')">Mock</button>
 		<button onclick="giveItem('sympathy')">Sympathy</button>
-	</footer>
+	</footer>-->
+
+	<section class="container battleground">
+		<row>
+			<col-12 class="buffer">
+				<div class="row names">
+					<div class="col-12 player-names d-flex justify-content-row justify-content-around">
+						<!--player names here-->
+						<h4 id="player-name">name1</h4>
+						<h4 id="opponent-name">name2</h4>
+
+					</div>
+					<div class="col-12 player-health">
+						<!--progress bars-->
+						<div class="row">
+							<div class="col-6">
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+									 aria-valuemax="100" id="player-health"></div>
+								</div>
+								<h5>Hits: <span id="hits"></span></h5>
+							</div>
+							<div class="col-6">
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0"
+									 aria-valuemax="100" id="opponent-health"></div>
+								</div>
+								<h5>Hits: <span id="opponent-hits"></span></h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row images">
+					<div class="col-6 my-5">
+						<!--player images -->
+						<img class="player-morty" src="/assets/morty.png" alt="">
+					</div>
+					<div class="col-6 d-flex justify-content-end my-5">
+						<!--player images -->
+						<img src="/assets/greaserMorty.png" alt="" class="greaser-morty">
+					</div>
+				</div>
+				<div class="row actions">
+					<div class="col text-center" id="attack-buttons">
+						<!--attack buttons-->
+						<h4>Attacks</h4>
+						<button class="btn btn-danger" onclick="damage(1)">Fierce Lunge</button>
+						<button class="btn btn-danger" onclick="damage(5)">Leg Sweep</button>
+						<button class="btn btn-danger" onclick="damage(10)">Mope</button>
+					</div>
+					<div class="col text-center">
+						<h4>Items</h4>
+						<button class="btn btn-warning" onclick="giveItem('shame')">shame</button>
+						<button class="btn btn-warning" onclick="giveItem('mock')">Mock</button>
+						<button class="btn btn-warning" onclick="giveItem('sympathy')">Sympathy</button>
+					</div>
+				</div>
+				</div>
+			</col-12>
+		</row>
+
+
+	</section>
+
+
+
 
 	<script src="app/game.js"></script>
 </body>
