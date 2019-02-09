@@ -69,14 +69,17 @@
 					</div>
 				</div>
 				<div class="row actions">
-					<div class="col text-center" id="attack-buttons">
+					<div class="col-5 text-center" id="attack-buttons">
 						<!--attack buttons-->
 						<h4>Attacks</h4>
 						<button class="btn btn-danger" onclick="damage(1)">Fierce Lunge</button>
 						<button class="btn btn-danger" onclick="damage(5)">Leg Sweep</button>
 						<button class="btn btn-danger" onclick="damage(10)">Mope</button>
 					</div>
-					<div class="col text-center">
+					<div class="col-2">
+						<button onclick="resetGame()" class="btn btn-primary">Reset</button>
+					</div>
+					<div class="col-5 text-center">
 						<h4>Items</h4>
 						<button class="btn btn-warning" onclick="giveItem('confidence')">Confidence</button>
 						<button class="btn btn-warning" onclick="giveItem('sarcasm')">Sarcasm</button>

@@ -61,6 +61,16 @@ function addMods() {
   return currentMods;
 }
 
+function resetGame() {
+  opponent.health = 100;
+  player.health = 100;
+  opponent.hits = 0;
+  player.hits = 0;
+  player.items.pop();
+
+  update();
+}
+
 
 
 
