@@ -13,28 +13,28 @@ var opponent = {
 }
 
 var items = {
-  shame: {
-    name: 'Shame',
-    modifier: 2,
-    description: 'shame'
-  },
-  mock: {
-    name: 'mock',
+  confidence: {
+    name: 'confidence',
     modifier: 5,
-    description: 'like shame but meaner'
+    description: 'can\'t stop me now'
   },
-  sympathy: {
-    name: 'sympathy',
-    modifier: -5,
-    description: 'Jerry\'s only defense'
+  sarcasm: {
+    name: 'sarcasm',
+    modifier: 2,
+    description: 'sassy'
+  },
+  strengthSyrum: {
+    name: 'strengthSyrum',
+    modifier: 7,
+    description: 'Makes you stronger'
   }
 }
 
 function opponentAttack() {
   setTimeout(function () {
-    player.health -= Math.floor(Math.random() * 10);
+    player.health -= Math.floor(Math.random() * 15);
     opponent.hits += 1;
-  }, 1000)
+  }, 2000)
 }
 
 function damage(hitNum) {
@@ -46,10 +46,10 @@ function damage(hitNum) {
 
 function giveItem(item) {
   if (player.items.length == 0) {
-    player.items.push(items[item].modifier)
+    player.items.push(items[item].modifier);
   } else {
     player.items.pop();
-    player.items.push(items[item].modifier)
+    player.items.push(items[item].modifier);
   }
 }
 
