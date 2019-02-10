@@ -31,16 +31,18 @@ var items = {
 }
 
 function opponentAttack() {
-  setTimeout(function () {
-    player.health -= Math.floor(Math.random() * 15);
-    opponent.hits += 1;
-  }, 2000)
+
+  player.health -= Math.floor(Math.random() * 15);
+  opponent.hits += 1;
+
 }
 
 function damage(hitNum) {
+
   opponent.health -= hitNum + addMods();
   player.hits += 1;
   opponentAttack();
+  endGame();
   update();
 }
 
@@ -71,12 +73,13 @@ function resetGame() {
   update();
 }
 
-
-
-
-
-
-
+function endGame() {
+  if (player.health <= 0) {
+    alert('You have been defeated! Press the reset button and keep training!');
+  } else if (opponent.health <= 0) {
+    alert('You have defeated Greaser Morty! K.O!');
+  }
+}
 
 function update() {
   document.getElementById('player-health').innerText = player.health.toString();
